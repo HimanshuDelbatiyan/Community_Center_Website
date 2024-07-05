@@ -1,0 +1,59 @@
+
+<!-- Main Content -->
+<main class="container" id="mainContent">
+    <br>
+    <br>
+    <div class="container w-75" style="border: 1px solid black; background-color:  #f2f2f2; border-radius: 15px; padding: 2vh 5vh 2vh 10vh; width: 450px ">
+        <h1><b><i>Edit Profile</i></b></h1>
+        <hr>
+        <br>
+        <!--This container for displaying the error messages !-->
+        <div id="messageArea"></div>
+        <!-- No "action" because we are handling the submit event programmatically-->
+        <form  method="post" id="registerForm" action="/edit">
+            <div class="form-group col-md-11">
+                <label for="firstName_update"><i><b>First Name</b></i></label>
+                <input type="text"  name="firstName_update" class="form-control" id="firstName_update"  value="<%=userData.firstName%>" required>
+            </div>
+            <div class="form-group col-md-11">
+                <label for="lastName_update"><i><b>Last Name</b></i></label>
+                <input type="text"  name="lastName_update" class="form-control" id="lastName_update"  value="<%=userData.lastName%>"  required>
+            </div>
+            <div class="form-group col-md-11">
+                <label for="email_update"><i><b>Email</b></i></label>
+                <input type="email"  name="email_update" class="form-control" id="email_update" value="<%=userData.email%>" required>
+            </div>
+            <div class="form-group col-md-11">
+                <label for="phone_update"><i><b>Phone</b></i></label>
+                <input type="text"  name="phone_update" class="form-control" id="phone_update" value="<%=userData.phone%>"required>
+            </div>
+            <div class="form-group col-md-11">
+                <label for="address_update"><i><b>Address</b></i></label>
+                <input type="text"  name="address_update" class="form-control" id="address_update" value="<%=userData.address%>"required>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary" style="width:auto;" id="registerButton" data-toggle="modal" data-target="#exampleModalCenter">Update Contact</button>
+&nbsp;&nbsp;&nbsp;            <a  href="/home" class="btn btn-primary" style="width:auto;" id="registerButton" data-toggle="modal" data-target="#exampleModalCenter">Cancel</a>
+
+        </form>
+    </div>
+
+
+
+</main>
+
+<% if(showModal) {%>
+<div class="modal fade show" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="signTactic" aria-hidden="false" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="event_info">Harmony Hub</h5>
+            </div>
+            <div class="modal-body" id="eventDetailContainer">
+                <p id="eventName">Contact Info has been updated successfully: <b><%=userData.firstName%></b>&nbsp;<b><%=userData.lastName%></b> </p>
+                <p>Home Page: <a href="/" class="btn btn-primary">Home</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+<%}%>

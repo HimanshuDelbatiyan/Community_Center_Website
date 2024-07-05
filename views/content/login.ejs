@@ -1,0 +1,74 @@
+
+<main class="container" id="mainContent">
+        <br>
+        <!-- Section: Design Block -->
+        <section class=" text-center text-lg-start">
+            <div class="card mb-3">
+                <div class="row g-0 d-flex align-items-center">
+                    <div class="col-lg-4 d-none d-lg-flex">
+                        <img src="/assests/images/center_2.jpg" alt="Trendy Pants and Shoes"
+                             class="w-100 rounded-t-5 rounded-tr-lg-0 rounded-bl-lg-5" />
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="card-body py-5 px-md-5">
+                        <h2 style="text-align: center">Login</h2>
+                            <div id="messageArea"></div>
+                            <%if(messages.length > 0) {%>
+                                <div class="alert alert-danger">
+                                    <%= messages %>
+                                </div>
+                            <% } %>
+                            <form  method="POST">
+                                <!-- Email input -->
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="loginEmail">Email address</label>
+                                    <input type="email" name="email" id="loginEmail" class="form-control" />
+                                </div>
+
+                                <!-- Password input -->
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="loginPassword">Password</label>
+                                    <input type="password" name ="password" id="loginPassword" class="form-control" />
+                                </div>
+
+                                <!-- 2 column grid layout for inline styling -->
+                                <div class="row mb-4">
+                                    <p class="text-center text-muted small">
+                                        Don't have an account?
+                                        <a id="registerLink" href="/register"> Register Here</a>
+                                    </p>
+                                </div>
+
+                                <!-- Submit button -->
+                                <button type="submit" class="btn btn-primary btn-block mb-4" id="loginButton">Log in</button>
+                                <button type="reset" class="btn btn-warning btn-block mb-4">Cancel</button>
+
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section: Design Block -->
+</main>
+
+<!--A Small Modal for Showing the welcome message ! -->
+
+<div class="modal fade bd-example-modal-sm" id="welcomeModal" tabindex="-1" role="dialog"
+aria-labelledby="mySmallModalLabel" aria-hidden="true" style="background-color: transparent">
+    <div class="modal-dialog modal-sm" style="
+background-color: white;
+border-radius: 5px;
+padding: 0px 3px;
+">
+        <div class="modal-content-welcome" style="width: 296px;">
+            <h3 id="h1Modal">Welcome to Harmony Hub</h3>
+            <br>
+            <br>
+            <h6>Redirecting to Services Page.......
+            Please wait</h6>
+        </div>
+    </div>
+</div>
+

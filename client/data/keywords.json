@@ -1,0 +1,22 @@
+{
+
+  "keywords" :
+  [
+    {"keyword": "Events", "Url": "/events"},
+    {"keyword": "Blogs", "Url": "/blogs"},
+    {"keyword": "Services", "Url": "/services"},
+    {"keyword": "Contact", "Url": "/contact"},
+    {"keyword": "Portfolio", "Url": "/portfolio"},
+    {"keyword": "Register", "Url": "/register"},
+    {"keyword": "Terms", "Url": "/terms"},
+    {"keyword": "Login", "Url": "/login"},
+    {"keyword": "Gallery", "Url": "/gallery"},
+    {"keyword": "Privacy Policy", "Url": "/privacy"},
+    {"keyword": "Team", "Url": "/team"},
+    {"keyword": "Statistics", "Url": "/statistics"},
+    {"keyword": "Planning", "Url": "/planning"},
+    {"keyword": "Edit Contact", "Url": "/edit"}
+
+
+  ]
+}

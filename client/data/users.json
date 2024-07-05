@@ -1,0 +1,26 @@
+{
+  "users":
+  [
+    {
+      "FirstName" : "Himanshu",
+      "LastName" : "Sherawat",
+      "EmailAddress": "Sherawat@gmail.com",
+      "UserName": "himanshu",
+      "Password": "001"
+    },
+    {
+      "FirstName" : "Johnny",
+      "LastName" : "Dogs",
+      "EmailAddress": "Dogs@gmail.com",
+      "UserName": "JohnnyD",
+      "Password": "011"
+    },
+    {
+      "FirstName" : "Rakob",
+      "LastName" : "Jack",
+      "EmailAddress": "RJ@gmail.com",
+      "UserName": "R J",
+      "Password": "123"
+    }
+  ]
+}

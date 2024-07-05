@@ -1,0 +1,76 @@
+<nav class="navbar navbar-expand-lg bg-body-secondary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/home"><i class="fa-solid fa-people-group"></i> Harmony Hub</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto" id="navLinks">
+                <li class="nav-item">
+                    <a class="nav-link"  href="/home"><i class="fa-solid fa-house"></i> Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/portfolio"><i class="fa-solid fa-folder"></i> Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/services"><i class="fa-solid fa-bars"></i> Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/team"><i class="fa-solid fa-users"></i> Teams</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"  href="/blogs"><i class="fa-solid fa-blog"></i> Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"  href="/gallery"><i class="fa-solid fa-image"></i> Gallery</a>
+                </li>
+                &nbsp;<% if(LoggedIn) { %>
+                    <li class="nav-item">
+                        <a class="nav-link"  id="stat" href="/statistics"> <i class="fa-solid fa-chart-simple"></i> Statistics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"  id="plan" href="/planning"><i class="fa-regular fa-calendar-days"></i> Planning</a>
+                    </li><li class="nav-item">
+                        <a class="nav-link"  id="plan" href="/edit"><i class="fa-solid fa-user-pen"></i> Edit Info</a>
+                    </li>
+                <%}%>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+
+            </ul>
+            <!-- This is for Search Bar Use-->
+            <ul id="leftNav" class="navbar-nav ms-auto mb-2 mb-lg-0" >
+                <li class="nav-item">
+                    <div class = "dropdown">
+                        <input class="form-control mr-sm-2" name="userSearch"
+                           type="search" placeholder= "Search..." aria-label="Search" id="searchText">
+    <!--                    This will show the founded results-->
+                        <div class="dropdown-content">
+                            <ul id="results-box">
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                &nbsp;<% if(LoggedIn) { %>
+                <li class="nav-item" id="logoutNav">
+                    <a class="nav-link"  href="/logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+                </li>
+                <% } else { %>
+                    <li class="nav-item" id="loginNav">
+                        <a class="nav-link"  href="/login"><i class="fa-solid fa-user"></i> Login</a>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+    </div>
+</nav>
+

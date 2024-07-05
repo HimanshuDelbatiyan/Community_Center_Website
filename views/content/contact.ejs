@@ -1,0 +1,70 @@
+
+<br>
+<br>
+<div class="container w-75" style="border: 1px solid black; background-color:  #f2f2f2; border-radius: 15px; padding: 2vh 5vh 2vh 10vh; width: 450px ">
+    <h1 style="color: blue"><b><i>Contact Us</i></b></h1>
+<!--    Self Submitting Form !-->
+    <form method="post" id="ContactForm">
+        <!--This container for displaying the error messages !-->
+        <div id="messageArea"></div>
+        <div class="form-group col-md-11">
+            <label for="firstName"><i><b>First Name</b></i></label>
+            <input type="text"  name="firstName" class="form-control" id="firstName" placeholder="Enter you First Name here:" required>
+        </div>
+        <div class="form-group col-md-11">
+            <label for="lastName"><i><b>Last Name</b></i></label>
+            <input type="text"  name="lastName" class="form-control" id="lastName" placeholder="Enter you Last Name here:" required>
+        </div>
+        <div class="form-group col-md-11">
+            <label for="email"><i><b>Email</b></i></label>
+            <input type="email"  name="email" class="form-control" id="email" placeholder="Enter your Email here:" required>
+        </div>
+        <div class="form-group col-md-11">
+            <label for="contactSubject"><i><b>Subject:</b></i></label>
+            <input  class="form-control" name="subject" id="contactSubject" placeholder="Enter your reason of Contacting Us:" required>
+        </div>
+        <div class="form-group col-md-11">
+            <label for="message"><i><b>Message for Us:</b></i></label>
+            <textarea  class="form-control" id="message" name="message" placeholder="Enter your reason of Contacting Us:" required></textarea>
+        </div>
+
+        <div class="form-group col-md-11">
+            <label for="inputAddress"><i><b>Address</b></i></label>
+            <textarea class="form-control" name="address" id="inputAddress" placeholder="1234 Main St" required></textarea>
+        </div>
+        <div class="form-group col-md-11">
+            <label for="city"><i><b>City: </b></i></label>
+            <input type="text" class="form-control" id="city" name="city" required>
+        </div>
+        <div class="form-group col-md-11">
+            <label for="zip"><i><b>Zip</b></i></label>
+            <input type="text" name="zip" class="form-control" id="zip"  required>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary" style="width: 90px;" id="submitButton">Submit</button>
+&nbsp;&nbsp;&nbsp;
+        <button type="reset" class="btn btn-warning" style="width: 90px;">Cancel</button>
+
+    </form>
+</div>
+
+
+<% if(showModal) {%>
+<div class="modal fade show" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="signTactic" aria-hidden="false" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="event_info">Harmony Hub</h5>
+            </div>
+            <div class="modal-body" id="eventDetailContainer">
+                <p>Thanks for contacting Harmony Hub, <b><%=contactData.firstName%></b></p>
+                <p>We will get in touch with you soon.</p>
+                <p>Home Page:<a href="/home" class="btn btn-primary">Home</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+<%}%>
+
+
+

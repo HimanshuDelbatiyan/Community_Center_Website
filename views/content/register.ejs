@@ -1,0 +1,77 @@
+
+<!-- Main Content -->
+<main class="container" id="mainContent">
+    <br>
+    <br>
+    <div class="container w-75" style="border: 1px solid black; background-color:  #f2f2f2; border-radius: 15px; padding: 2vh 5vh 2vh 10vh; width: 450px ">
+        <h1><b><i>Register</i></b></h1>
+        <hr>
+        <br>
+        <!--This container for displaying the error messages !-->
+        <div id="messageArea"></div>
+        <%if(messages.length > 0) {%>
+            <div class="alert alert-danger">
+                <%= messages %>
+            </div>
+        <% } %>
+        <!-- No "action" because we are handling the submit event programmatically-->
+        <form  method="post" id="registerForm" action="/register">
+            <div class="form-group col-md-11">
+                <label for="firstName_register"><i><b>First Name</b></i></label>
+                <input type="text"  name="firstName_register" class="form-control" id="firstName_register" placeholder="Enter you First Name here:" required>
+            </div>
+            <div class="form-group col-md-11">
+                <label for="lastName_register"><i><b>Last Name</b></i></label>
+                <input type="text"  name="lastName_register" class="form-control" id="lastName_register" placeholder="Enter you Last Name here:" required>
+            </div>
+            <div class="form-group col-md-11">
+                <label for="email_register"><i><b>Email</b></i></label>
+                <input type="email"  name="email" class="form-control" id="email_register" placeholder="Enter your Email here:" required>
+            </div>
+            <div class="form-group col-md-11">
+                <label for="phone_register"><i><b>Phone</b></i></label>
+                <input type="text"  name="phone_register" class="form-control" id="phone_register" placeholder="Enter your Phone here:" required>
+            </div>
+            <div class="form-group col-md-11">
+                <label for="password_register"><i><b>Password</b></i></label>
+                <input type="password"  name="password" class="form-control" id="password_register" placeholder="Enter your Password here:" required>
+            </div>
+            <div class="form-group col-md-11">
+                <label for="address_register"><i><b>Address</b></i></label>
+                <textarea class="form-control" name="address_register" id="address_register" placeholder="1234 Main St" required></textarea>
+            </div>
+            <div class="form-group col-md-11">
+                <label for="city_register"><i><b>City: </b></i></label>
+                <input type="text" class="form-control" id="city_register" name="city_register" required/>
+            </div>
+            <div class="form-group col-md-11">
+                <label for="zip_register"><i><b>Zip</b></i></label>
+                <input type="text" class="form-control" id="zip_register" name="zip_register"  required/>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary" style="width:auto;" id="registerButton" data-toggle="modal" data-target="#exampleModalCenter">Regsiter for Harmony Hub</button>
+            &nbsp;&nbsp;&nbsp;
+            <button type="reset" class="btn btn-warning" style="width: 90px;">Cancel</button>
+
+        </form>
+    </div>
+
+
+
+</main>
+
+<% if(showModal) {%>
+<div class="modal fade show" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="signTactic" aria-hidden="false" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="event_info">Harmony Hub</h5>
+            </div>
+            <div class="modal-body" id="eventDetailContainer">
+                <p>Thanks for Joining Harmony Hub <b><%=userData.firstName%></b></p>
+                <p>Please use your registered email to Login: <a href="/login" class="btn btn-primary">Login</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+<%}%>

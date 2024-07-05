@@ -1,0 +1,90 @@
+{
+  "events" :
+    [
+      {
+        "eventName": "Conference 1",
+        "date": "2024-05-15",
+        "eventLocation": "City Convention Center",
+        "organizer": "Tech Events Inc.",
+        "participants": ["John Doe", "Jane Smith", "Bob Johnson"],
+        "Description": "Annual technology conference showcasing the latest innovations and trends.",
+        "isFree": false
+      },
+      {
+        "eventName": "Music Festival 1",
+        "date": "2024-07-20",
+        "eventLocation": "Greenfield Park",
+        "organizer": "Music Entertainment Group",
+        "performers": ["Artist A", "Band B", "DJ X"],
+        "Description": "A vibrant music festival featuring a diverse lineup of artists.",
+        "isFree": false
+      },
+      {
+        "eventName": "Community Cleanup 1",
+        "date": "2024-04-08",
+        "eventLocation": "City Streets",
+        "organizer": "Green Initiative Team",
+        "volunteers": ["Volunteer1", "Volunteer2", "Volunteer3"],
+        "Description": "Join us in cleaning up the community and promoting environmental awareness.",
+        "isFree": true
+      }
+
+    ],
+  "extraEvents":
+    [
+      {
+        "eventName": "Music Festival",
+        "date": "2024-07-20",
+        "location": "Greenfield Park",
+        "organizer": "Music Entertainment Group",
+        "performers": ["Artist A", "Band B", "DJ X"],
+        "description": "A vibrant music festival featuring a diverse lineup of artists.",
+        "isFree": false
+      },
+      {
+        "eventName": "Community Cleanup",
+        "date": "2024-04-08",
+        "location": "City Streets",
+        "organizer": "Green Initiative Team",
+        "volunteers": ["Volunteer1", "Volunteer2", "Volunteer3"],
+        "description": "Join us in cleaning up the community and promoting environmental awareness.",
+        "isFree": true
+      },
+      {
+        "eventName": "Tech Workshop",
+        "date": "2024-06-12",
+        "location": "Tech Hub Workspace",
+        "organizer": "Coding Enthusiasts Club",
+        "instructors": ["InstructorX", "InstructorY"],
+        "description": "Hands-on workshop on the latest programming technologies.",
+        "isFree": false
+      },
+      {
+        "eventName": "Tech Workshop 1",
+        "date": "2024-06-12",
+        "eventLocation": "Tech Hub Workspace",
+        "organizer": "Coding Enthusiasts Club",
+        "instructors": ["InstructorX", "InstructorY"],
+        "Description": "Hands-on workshop on the latest programming technologies.",
+        "isFree": false
+      },
+      {
+        "eventName": "Conference 45",
+        "date": "2024-08-25",
+        "eventLocation": "Exhibition Hall",
+        "organizer": "Tech Expo Group",
+        "participants": ["Alice Brown", "Charlie Davis", "Eva White"],
+        "Description": "Tech Expo showcasing cutting-edge technologies and breakthroughs.",
+        "isFree": false
+      },
+      {
+        "eventName": "Conference",
+        "date": "2024-05-15",
+        "eventLocation": "City Convention Center",
+        "organizer": "Tech Events Inc.",
+        "participants": ["John Doe", "Jane Smith", "Bob Johnson"],
+        "Description": "Annual technology conference showcasing the latest innovations and trends.",
+        "isFree": false
+      }
+    ]
+}

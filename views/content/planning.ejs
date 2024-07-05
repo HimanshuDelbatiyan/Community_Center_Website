@@ -1,0 +1,104 @@
+
+<section>
+    <div class="leftBox">
+        <div id="proposeEventContainer" class="form-control" style="">
+            <!--This container for displaying the error messages !-->
+            <div id="messageArea"></div>
+            <form  method="post" action="/planning">
+                <div class="form-group col-md-11">
+                    <label for="eventName_propose"><i><b>Event Name</b></i></label>
+                    <input type="text"  name="eventName_propose" class="form-control" id="eventName_propose" placeholder="Enter you event name here:" required>
+                </div>
+                <div class="form-group col-md-11">
+                    <label for="eventDate_propose"><i><b>Date</b></i></label>
+                    <input type="text"  name="eventDate_propose" class="form-control" id="eventDate_propose" placeholder="Enter your event date here: 15 March" required>
+                </div>
+                <div class="form-group col-md-11">
+                    <label for="eventDescription_propose"><i><b>Event Description</b></i></label>
+                    <input class="form-control" name="eventDescription_propose" id="eventDescription_propose" placeholder="1234 Main St" required></input>
+                </div>
+                <div class="form-group col-md-11">
+                    <label for="eventAddress_propose"><i><b>Event Address</b></i></label>
+                    <input type="text" class="form-control" id="eventAddress_propose" name="eventAddress_propose" required/>
+                </div>
+                <br>
+                <button type="submit" class="btn btn-primary" id="proposeButton" >Propose Event</button>
+                &nbsp;&nbsp;&nbsp;
+                <button type="reset" class="btn btn-warning">Reset</button>
+            </form>
+        </div>
+        <div class="content">
+            <h1>
+                Marked Events
+            </h1>
+            <div class="markedEvents">
+                <ul>
+                    <% for (let count=0; count < markedEvents.length; count++) { %>
+                    <li>
+                        <div class="time">
+                            <h2>
+                                <%= markedEvents[count].date.substring(0, 2)%> <br><span style="font-size: 24px"> <%= markedEvents[count].date.substring(2)%> </span>
+                            </h2>
+                        </div>
+                        <div class="details">
+                            <h3>
+                                <%= markedEvents[count].event_name%>
+                            </h3>
+                                <a href="/planning/delete/:<%=events[count]._id%>">Remove Event</a>
+                        </div>
+                        <div style="clear: both;"></div>
+                    </li>
+                    <%}%>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="events">
+        <ul>
+            <% for (let count=0; count < events.length; count++) { %>
+            <li>
+                <div class="time">
+                    <h2>
+                        <%=events[count].date.substring(0,2)%><br><span style="font-size: 24px"> <%=events[count].date.substring(2)%></span>
+                    </h2>
+                </div>
+                <div class="details">
+                    <h3>
+                        <%= events[count].event_name%>
+                    </h3>
+                    <!-- Each Event Card button will be assciated with the unique id's -->
+                    <button id="<%=events[count]._id%>" class="eventDetailButtons" >Get Details</button>
+                    <a id="markEvent_<%=events[count]._id%>"  href="/planning/:<%=events[count]._id%>">Mark Event</a>
+                </div>
+                <div style="clear: both;"></div>
+            </li>
+            <%}%>
+        </ul>
+    </div>
+</section>
+
+
+<%for (let count=0; count < events.length; count++) { %>
+<!--    An Modal-->
+<div class="modal fade" id="modal_<%= events[count]._id%>" tabindex="-1" role="dialog" aria-labelledby="signTactic" aria-hidden="false" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="event_info">Event Details</h5>
+            </div>
+            <div class="modal-body" id="eventDetailContainer">
+                <p id="eventName"><b>Event Name:</b><%= events[count].event_name%></p>
+                <p id="eventDate"><b>Event Date:</b><%= events[count].date%></p>
+                <p id="eventAddress"><b>Event Address:</b><%= events[count].address%></p>
+                <p id="eventDescription"><b>Event Description:</b><%= events[count].description%></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<%}%>
+

@@ -1,0 +1,69 @@
+<!--
+Name: Himanshu
+Student ID: 100898751
+File Name:  index.html
+Folder Name: Assignment-4
+Date Created: 24-01-24
+Description: This is home page of Harmony Hub
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Himanshu">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= pageTitle %></title>
+    <!-- CSS Section -->
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/@fortawesome/fontawesome-free/css/all.css">
+    <!--    Style Sheet-->
+    <link rel="stylesheet" href="/content/css/style.css">
+    <!--  we will load the namespace in which we have stored the class as property !-->
+    <script src = "/scripts/namespace.js"></script>
+    <script src = "/scripts/router.js"></script>
+    <!--    Although we have stored the class as key-value pair inside the NameSpace called assignment_one
+    but,we still have to load the class file so that namespace property can refer this !
+    Otherwise, best of luck for ERROR -->
+    <script src = "/scripts/User.js"></script>
+    <script src = "/scripts/contact.js"></script>
+    <!--    For Chart.js (node package manager did not work)-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!--Asynchronously loading the content using the keyword "async"
+     Key has been defined as well as the callback method.
+     -->
+    <script async
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-uoye5HjVIzpgH22vyGL5O1OVQ7FLmPA&loading=async&callback=initMap">
+    </script>
+
+</head>
+<!--Variable Called "page" is being used to determine which page content to be displayed to the user.-->
+<body id="<%= page %>">
+<!--Including the "header" from another file using the include() method-->
+<header>
+    <%- include('./components/header') %>
+</header>
+
+<!-- Showing the page content using the page variable -->
+<main>
+    <%- include('./content/' + page) %>
+</main>
+
+<!--Note: Footer will be added dynamically(During the runtime) therefore no need for the include() method-->
+
+<!-- Scripting Section -->
+<script src="/jquery/dist/jquery.min.js"></script>
+<script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<!--Own Js File -->
+<script src="/scripts/main.js"></script>
+
+</body>
+</html>
+

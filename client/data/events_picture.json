@@ -1,0 +1,31 @@
+{
+  "events" :
+  [
+    {
+      "imageSrc": "/assests/images/eventGallery_1.jpg",
+      "altText": "Event at Whitby"
+    },
+    {
+      "imageSrc": "/assests/images/eventGallery_5.jpg",
+      "altText": "Event at Oshawa"
+    },
+    {
+      "imageSrc": "/assests/images/eventGallery_3.jpg",
+      "altText": "New Year Event"
+    },
+    {
+      "imageSrc": "/assests/images/eventGallery_4.jpg",
+      "altText": "Christmas Party"
+    },
+    {
+      "imageSrc": "/assests/images/eventGallery_5.jpg",
+      "altText": "Get together at Community Center"
+    },
+    {
+      "imageSrc": "/assests/images/eventGallery_5.jpg",
+      "altText": "Nulla ex nihil eligendi tempora"
+    }
+  ]
+
+
+}
